@@ -133,6 +133,14 @@ export default {
         return [];
       },
     },
+    dateCellComponent: {
+      type: String,
+      default: undefined,
+    },
+    getDateCellData: {
+      type: Function,
+      default: () => [],
+    },
   },
   data() {
     return {

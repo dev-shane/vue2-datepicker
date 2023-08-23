@@ -7,6 +7,10 @@ import '../src/locale/zh-cn';
 
 import App from './app';
 
+import SimpleDateCell from './demo/SimpleDateCell.vue';
+
+Vue.component('simple-date-cell', SimpleDateCell);
+
 DatePicker.install(Vue);
 DatePicker.locale('en');
 

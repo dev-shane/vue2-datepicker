@@ -66,6 +66,14 @@ export default {
       type: Boolean,
       default: false,
     },
+    dateCellComponent: {
+      type: String,
+      default: undefined,
+    },
+    getDateCellData: {
+      type: Function,
+      default: () => [],
+    },
   },
   data() {
     const panels = ['date', 'month', 'year'];
@@ -280,6 +288,8 @@ export default {
         onSelect={this.handleSelectDate}
         onChangepanel={this.handelPanelChange}
         onChangecalendar={this.handleCalendarChange}
+        dateCellComponent={this.dateCellComponent}
+        getDateCellData={this.getDateCellData}
       />
     );
   },

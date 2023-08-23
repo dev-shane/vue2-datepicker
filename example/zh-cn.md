@@ -81,3 +81,9 @@
 ### 固定的时间列表
 
 可以通过 `timePickerOptions` 提供一个固定的时间列表选择
+
+<!-- CustomTableDate -->
+
+### Custom Table Date
+
+You can provide a component to custom table date

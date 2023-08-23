@@ -66,7 +66,12 @@
               @mouseenter="handleMouseEnter(cell)"
               @mouseleave="handleMouseLeave(cell)"
             >
-              <div>{{ cell.getDate() }}</div>
+              <component
+                :is="dateCellComponent"
+                v-if="dateCellComponent"
+                v-bind="getDateCellData(cell)"
+              ></component>
+              <div v-else>{{ cell.getDate() }}</div>
             </td>
           </tr>
         </tbody>
@@ -124,6 +129,14 @@ export default {
       default: () => [],
     },
     getCellClasses: {
+      type: Function,
+      default: () => [],
+    },
+    dateCellComponent: {
+      type: String,
+      default: undefined,
+    },
+    getDateCellData: {
       type: Function,
       default: () => [],
     },

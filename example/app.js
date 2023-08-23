@@ -14,6 +14,7 @@ import HideSeconds from './demo/HideSeconds.vue';
 import MinuteStep from './demo/MinuteStep.vue';
 import FixedTimeList from './demo/FixedTimeList.vue';
 import Disabled from './demo/Disabled.vue';
+import CustomTableDate from './demo/CustomTableDate.vue';
 
 import docEn from './en.md';
 import docZhCN from './zh-cn.md';
@@ -73,6 +74,11 @@ const components = [
     id: 'ControlOpen',
     component: ControlOpen,
     code: fs.readFileSync(`${__dirname}/demo/ControlOpen.vue`, 'utf8'),
+  },
+  {
+    id: 'CustomTableDate',
+    component: CustomTableDate,
+    code: fs.readFileSync(`${__dirname}/demo/CustomTableDate.vue`, 'utf8'),
   },
 ];
 

@@ -81,3 +81,9 @@ Set custom time options by `hourOptions` `minuteOptions` `secondOptions`.
 ### Select fixed time list
 
 You can provide a list of fixed time for users to choose by `timePickerOptions`
+
+<!-- CustomTableDate -->
+
+### Custom Table Date
+
+You can provide a component to custom table date
