@@ -159,6 +159,8 @@ You can also override some of the default locale by `lang`.
 | time-picker-options | set fixed time list to select                    | [time-picker-options](#time-picker-options)     | null           |
 | prefix-class        | set prefix class                                 | `string`                                        | 'mx'           |
 | scroll-duration     | set the duration of scroll when hour is selected | `number`                                        | 100            |
+| date-cell-component | custom date cell component                       | `string`                                        | 'date-cell'    |
+| get-date-cell-data  | function for handle date data                    | `function`                                      | 100            |
 
 #### Token
 
@@ -304,6 +306,70 @@ Set fixed time list to select;
 | header        | popup header             |
 | footer        | popup footer             |
 | sidebar       | popup sidebar            |
+
+
+### Custom Table Date / Custom date cell
+
+Use `date-cell-component` and `get-date-cell-data` to customize date cell display.
+
+#### Create a functional component for custom date cell
+```vue
+<template functional>
+  <div>
+    <div>{{ props.display }}</div>
+    <div :style="{ whiteSpace: 'pre' }">{{ props.title }}</div>
+    <!-- <div>{{ props.date }}</div> -->
+  </div>
+</template>
+<script>
+export default {
+  props: ['title', 'display', 'date'],
+};
+</script>
+```
+
+#### Example
+```html
+<date-picker
+  v-model="value1"
+  format="YYYY-MM-DD"
+  type="date"
+  placeholder="Select date"
+  popup-class="custom-datepicker"
+  date-cell-component="simple-date-cell"
+  :get-date-cell-data="getCellData"
+></date-picker>
+```
+#### reset default style width and height
+```css
+.custom-datepicker .mx-calendar {
+  width: initial;
+}
+.custom-datepicker .mx-calendar-content {
+  height: initial;
+}
+```
+
+```js
+export default {
+  name: 'CustomTableDate',
+  data() {
+    return {
+      value1: null,
+    };
+  },
+  methods: {
+    getCellData(date) {
+      return {
+        display: date.getDate(),
+        date,
+        title: `cutom title for
+        ${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`,
+      };
+    },
+  },
+};
+```
 
 ## ChangeLog
 
