@@ -1,6 +1,6 @@
 {
-  "name": "vue2-datepicker",
-  "description": "A Datepicker Component For Vue2",
+  "name": "@o0ps72/vue2-datepicker",
+  "description": "A modified version of A Datepicker Component For Vue2",
   "main": "index.js",
   "module": "index.esm.js",
   "alias": {
@@ -11,7 +11,7 @@
     "/index.*",
     "/scss"
   ],
-  "version": "3.11.1",
+  "version": "3.11.1-update.1",
   "scripts": {
     "dev": "parcel ./example/dev.html --open --port 2235",
     "build:index": "cross-env NODE_ENV=production rollup -c",
@@ -30,7 +30,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mengxiong10/vue2-datepicker.git"
+    "url": "git+https://github.com/dev-shane/vue2-datepicker.git"
   },
   "keywords": [
     "vue",
@@ -41,9 +41,9 @@
   "author": "xiemengxiong",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mengxiong10/vue2-datepicker/issues"
+    "url": "https://github.com/dev-shane/vue2-datepicker/issues"
   },
-  "homepage": "https://github.com/mengxiong10/vue2-datepicker#readme",
+  "homepage": "https://github.com/dev-shane/vue2-datepicker#readme",
   "peerDependencies": {
     "vue": "^2.5.0"
   },
