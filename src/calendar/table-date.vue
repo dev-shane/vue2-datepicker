@@ -242,6 +242,9 @@ export default {
       if (target.tagName.toUpperCase() === 'DIV') {
         target = target.parentNode;
       }
+      if (this.dateCellComponent) {
+        target = target.closest('.cell');
+      }
       const index = target.getAttribute('data-row-col');
       if (index) {
         const [row, col] = index.split(',').map(v => parseInt(v, 10));
